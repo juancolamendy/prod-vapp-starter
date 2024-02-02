@@ -1,0 +1,4 @@
+Sitemap: https://app.productname.ai/sitemap.xml
+
+User-agent: *
+Allow: /*

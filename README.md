@@ -1,1 +1,1 @@
-# prod-vapp-starter
+# Product Name App

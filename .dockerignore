@@ -1,0 +1,7 @@
+dist
+node_modules
+build
+resources
+.git
+.next
+package-lock.json
