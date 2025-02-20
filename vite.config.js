@@ -11,7 +11,7 @@ export default ({ mode }) => {
   return defineConfig({
     // server config
     server: {
-      port: 3000,
+      port: process.env.PORT || 3000,
       proxy: {
         '/api': {
           target: apiTargetUrl,
@@ -21,7 +21,7 @@ export default ({ mode }) => {
       }
     },
     preview: {
-      port: 3000
+      port: process.env.PORT || 3000
     },
     
     // plugins
