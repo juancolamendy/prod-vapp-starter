@@ -1,4 +1,4 @@
-FROM mhart/alpine-node:16
+FROM node:23-alpine
 MAINTAINER JC
 
 RUN mkdir -p /app
