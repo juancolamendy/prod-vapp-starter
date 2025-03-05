@@ -52,9 +52,10 @@ export default {
 
   // Stripe
   getStripePublicApiKey: () => {
-    let apiKey = '';
+    const apiKey = import.meta.env.VITE_STRIPE_PUBLIC_KEY;
+    console.log('stripe api key:', apiKey);
     return apiKey;
-  },  
+  },
 
   // GA
   GA_ID: 'G-XXX',
