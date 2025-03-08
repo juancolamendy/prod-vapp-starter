@@ -5,6 +5,7 @@ import { BrowserRouter } from "react-router-dom";
 import ReactGA from "react-ga4";
 
 import { navigateTo, setResourceChain, registerOnUnAuthRedirectFn } from 'jcot-jslib';
+import { libConstants } from 'jcot-jslib';
 
 import Routes from "./Routes";
 
@@ -20,10 +21,10 @@ import { importResourceChain } from './utils/loaders';
 // register auth
 registerOnUnAuthRedirectFn(() => {
 	if (typeof window !== 'undefined' && typeof window.localStorage !== 'undefined') {
-		window.localStorage.removeItem(constants.X_ACCESS_TOKEN);
+		window.localStorage.removeItem(libConstants.X_ACCESS_TOKEN);
 	}
 	if (typeof window !== 'undefined') {
-		navigateTo(constants.RTE_LOGIN);
+		navigateTo(libConstants.RTE_LOGIN);
 	}
 });
 
@@ -33,7 +34,7 @@ importResourceChain().then(enRes => {
 });
 
 if(!constants.isDevMode()) {
-  ReactGA.initialize(constants.GA_ID);
+  ReactGA.initialize(constants.GA_ID());
 }
 
 const App = () => {
