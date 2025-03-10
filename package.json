@@ -18,7 +18,7 @@
     "classnames": "^2.3.1",
     "dotenv": "^16.0.0",
     "jcot-jslib": "^1.0.29",
-    "jcot-jsreactlib": "^1.0.5",
+    "jcot-jsreactlib": "^1.0.10",
     "jcot-jstwblocklib": "^1.0.80",
     "jcot-jstwviewlib": "^1.0.20",
     "moment": "^2.29.4",

@@ -7,7 +7,7 @@ import ReactGA from "react-ga4";
 import { navigateTo, setResourceChain, registerOnUnAuthRedirectFn } from 'jcot-jslib';
 import { libConstants } from 'jcot-jslib';
 
-import Routes from "./Routes";
+import { Routes } from "jcot-jsreactlib";
 
 import { AppContextProvider } from './contexts';
 
