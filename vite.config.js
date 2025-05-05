@@ -12,6 +12,9 @@ export default ({ mode }) => {
     // server config
     server: {
       port: process.env.PORT || 3000,
+      hmr: {
+        overlay: mode === 'production' ? false : true
+      },
       proxy: {
         '/api': {
           target: apiTargetUrl,
