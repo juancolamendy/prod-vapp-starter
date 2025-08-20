@@ -1,4 +1,4 @@
-import { libConstants } from 'jcot-jslib';
+import { constants as libConstants } from 'jcot-jslib';
 
 export const navitems = (navigate, onLogout) => [
   {

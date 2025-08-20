@@ -3,9 +3,9 @@ import React, { useState } from 'react';
 import classNames from 'classnames';
 import { useNavigate } from 'react-router-dom';
 
-import { doLogout, navigateTo, libConstants } from 'jcot-jslib';
-
+import { doLogout, navigateTo, removeLocalObject } from 'jcot-jslib';
 import { HorizontalNavItem } from 'jcot-jstwblocklib';
+import { constants as libConstants } from 'jcot-jslib';
 
 import { useAppContext } from '../contexts';
 
@@ -22,13 +22,11 @@ const HorizontalNavBar = () => {
   // functions
   const handleLogout = async () => {
     console.log('handleLogout');
-		setContext({});
-		await doLogout(libConstants.API_AUTH_LOGOUT, () => {
-			if (typeof window !== 'undefined' && typeof window.localStorage !== 'undefined') {
-				window.localStorage.removeItem(libConstants.X_ACCESS_TOKEN);
-			}
-            navigateTo(libConstants.RTE_LOGIN);
-		}); 
+    setContext({});
+    await doLogout(libConstants.API_AUTH_LOGOUT, () => {
+        removeLocalObject(libConstants.X_ACCESS_TOKEN);
+        navigateTo(libConstants.RTE_LOGIN);
+    });
   }
 
   // render
